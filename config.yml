@@ -35,39 +35,41 @@
 # +-----------------------------------------------------------------------------+
 # ------------------------------------------------------------------------------- #
 
-# -------------------------------------------------------------------------------------- #
-# +------------------------------------------------------------------------------------+
-# |Enabled: #Lets you toggle on or off certain items.                                  |
-# |  Coal: true                                                                        |
-# |  Iron: true                                                                        |
-# |  Lapis: true                                                                       |
-# |  Gold: true                                                                        |
-# |  Redstone: true                                                                    |
-# |  Emerald: true                                                                     |
-# |  Quartz: true                                                                      |
-# |  Diamond: true                                                                     |
-# |  Pork: true                                                                        |
-# |  Beef: true                                                                        |
-# |  Chicken: true                                                                     |
-# |  Rabbit: true                                                                      |
-# |  Mutton: true                                                                      |
-# |XP: #Lets you change the amount of XP a player gets when they mine a block.         |
-# |    #Note: Has to be a whole number.                                                |
-# |  Coal: 1                                                                           |
-# |  Iron: 1                                                                           |
-# |  Lapis: 4                                                                          |
-# |  Gold: 1                                                                           |
-# |  Redstone: 3                                                                       |
-# |  Emerald: 5                                                                        |
-# |  Quartz: 5                                                                         |
-# |  Diamond: 6                                                                        |
-# |  Pork: 2                                                                           |
-# |  Beef: 2                                                                           |
-# |  Chicken: 2                                                                        |
-# |  Rabbit: 2                                                                         |
-# |  Mutton: 2                                                                         |
-# +------------------------------------------------------------------------------------+
-# -------------------------------------------------------------------------------------- #
+# --------------------------------------------------------------------------------------------------- #
+# +-------------------------------------------------------------------------------------------------+
+# |Enabled: #Lets you toggle on or off certain items.                                               |
+# |  Coal: true                                                                                     |
+# |  Iron: true                                                                                     |
+# |  Lapis: true                                                                                    |
+# |  Gold: true                                                                                     |
+# |  Redstone: true                                                                                 |
+# |  Emerald: true                                                                                  |
+# |  Quartz: true                                                                                   |
+# |  Diamond: true                                                                                  |
+# |  Pork: true                                                                                     |
+# |  Beef: true                                                                                     |
+# |  Chicken: true                                                                                  |
+# |  Rabbit: true                                                                                   |
+# |  Mutton: true                                                                                   |
+# |XP: #Lets you change the amount of XP a player gets when they mine a block.                      |
+# |    #Note: Has to be a whole number.                                                             |
+# |  Coal: 1                                                                                        |
+# |  Iron: 1                                                                                        |
+# |  Lapis: 4                                                                                       |
+# |  Gold: 1                                                                                        |
+# |  Redstone: 3                                                                                    |
+# |  Emerald: 5                                                                                     |
+# |  Quartz: 5                                                                                      |
+# |  Diamond: 6                                                                                     |
+# |  Pork: 2                                                                                        |
+# |  Beef: 2                                                                                        |
+# |  Chicken: 2                                                                                     |
+# |  Rabbit: 2                                                                                      |
+# |  Mutton: 2                                                                                      |
+# |DroppedItems: true #Lets you make the items drop on the ground if true or go into the inventory. |
+# |                   #Note: true is on the ground, false is into the inventory.                    |
+# +-------------------------------------------------------------------------------------------------+
+# --------------------------------------------------------------------------------------------------- #
 
 Enabled:
     Coal: true
@@ -97,3 +99,4 @@ XP:
     Chicken: 2
     Rabbit: 2
     Mutton: 2
+DroppedItems: true

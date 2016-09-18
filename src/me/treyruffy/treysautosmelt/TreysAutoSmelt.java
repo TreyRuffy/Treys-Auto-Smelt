@@ -125,44 +125,74 @@ public class TreysAutoSmelt extends JavaPlugin implements Listener{
 				e.setCancelled(true);
 				block.setType(Material.AIR);
 				player.giveExp((int) (getConfig().getInt("XP.Iron"))); 
-				block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.IRON_INGOT));
+				if (getConfig().getBoolean("DroppedItems")){
+					block.getWorld().dropItem(player.getLocation(), new ItemStack (Material.IRON_INGOT));
+				} else {
+					player.getInventory().addItem(new ItemStack (Material.IRON_INGOT));
+				}
 			}
 		} else if (block.getType() == Material.GOLD_ORE && player.getGameMode() != GameMode.CREATIVE && player.hasPermission("smelt.gold") && getConfig().getBoolean("Enabled.Gold", true)){
 			if (player.getItemInHand().getType().equals(Material.IRON_PICKAXE) || player.getItemInHand().getType().equals(Material.DIAMOND_PICKAXE)){
 				e.setCancelled(true);
 				block.setType(Material.AIR);
 				player.giveExp((int) (getConfig().getInt("XP.Gold")));
-				block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.GOLD_INGOT));
+				if (getConfig().getBoolean("DroppedItems")){
+					block.getWorld().dropItem(player.getLocation(), new ItemStack (Material.GOLD_INGOT));
+				} else {
+					player.getInventory().addItem(new ItemStack (Material.GOLD_INGOT));
+				}
 			}
 		} else if (block.getType() == Material.COAL_ORE && player.getGameMode() != GameMode.CREATIVE && player.hasPermission("smelt.coal") && getConfig().getBoolean("Enabled.Coal", true)){
 			if (player.getItemInHand().getType().equals(Material.WOOD_PICKAXE) || player.getItemInHand().getType().equals(Material.GOLD_PICKAXE) || player.getItemInHand().getType().equals(Material.STONE_PICKAXE) || player.getItemInHand().getType().equals(Material.IRON_PICKAXE) || player.getItemInHand().getType().equals(Material.DIAMOND_PICKAXE)){
 				e.setCancelled(true);
 				block.setType(Material.AIR);
 				player.giveExp((int) (getConfig().getInt("XP.Coal")));
-				block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.COAL));
+				if (getConfig().getBoolean("DroppedItems")){
+					block.getWorld().dropItem(player.getLocation(), new ItemStack (Material.COAL));
+				} else {
+					player.getInventory().addItem(new ItemStack (Material.COAL));
+				}
 			}
 		} else if (block.getType() == Material.QUARTZ_ORE && player.getGameMode() != GameMode.CREATIVE && player.hasPermission("smelt.quartz") && getConfig().getBoolean("Enabled.Quartz", true)){
 			if (player.getItemInHand().getType().equals(Material.STONE_PICKAXE) || player.getItemInHand().getType().equals(Material.IRON_PICKAXE) || player.getItemInHand().getType().equals(Material.DIAMOND_PICKAXE)){
 				e.setCancelled(true);
 				block.setType(Material.AIR);
 				player.giveExp((int) (getConfig().getInt("XP.Quartz")));
-				block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.QUARTZ));
+				if (getConfig().getBoolean("DroppedItems")){
+					block.getWorld().dropItem(player.getLocation(), new ItemStack (Material.QUARTZ));
+				} else {
+					player.getInventory().addItem(new ItemStack (Material.QUARTZ));
+				}
 			}
 		} else if (block.getType() == Material.LAPIS_ORE && player.getGameMode() != GameMode.CREATIVE && player.hasPermission("smelt.lapis") && getConfig().getBoolean("Enabled.Lapis", true)){
 			if (player.getItemInHand().getType().equals(Material.STONE_PICKAXE) || player.getItemInHand().getType().equals(Material.IRON_PICKAXE) || player.getItemInHand().getType().equals(Material.DIAMOND_PICKAXE)){
 				e.setCancelled(true);
 				block.setType(Material.AIR);
 				player.giveExp((int) (getConfig().getInt("XP.Lapis")));
-				if (lapis <= 130){
-					block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.INK_SACK, 4, (short) 4));
-				} else if (lapis <= 220 && lapis >= 131){
-					block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.INK_SACK, 5, (short) 4));
-				} else if (lapis <= 345 && lapis >= 221){
-					block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.INK_SACK, 6, (short) 4));
-				} else if (lapis <= 435 && lapis >= 346){
-					block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.INK_SACK, 7, (short) 4));
-				} else if (lapis <= 500 && lapis >= 436){
-					block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.INK_SACK, 8, (short) 4));
+				if (getConfig().getBoolean("DroppedItems")){
+					if (lapis <= 130){
+						block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.INK_SACK, 4, (short) 4));
+					} else if (lapis <= 220 && lapis >= 131){
+						block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.INK_SACK, 5, (short) 4));
+					} else if (lapis <= 345 && lapis >= 221){
+						block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.INK_SACK, 6, (short) 4));
+					} else if (lapis <= 435 && lapis >= 346){
+						block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.INK_SACK, 7, (short) 4));
+					} else if (lapis <= 500 && lapis >= 436){
+						block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.INK_SACK, 8, (short) 4));
+					}
+				} else {
+					if (lapis <= 130){
+						player.getInventory().addItem (new ItemStack(Material.INK_SACK, 4, (short) 4));
+					} else if (lapis <= 220 && lapis >= 131){
+						player.getInventory().addItem (new ItemStack(Material.INK_SACK, 5, (short) 4));
+					} else if (lapis <= 345 && lapis >= 221){
+						player.getInventory().addItem (new ItemStack(Material.INK_SACK, 6, (short) 4));
+					} else if (lapis <= 435 && lapis >= 346){
+						player.getInventory().addItem (new ItemStack(Material.INK_SACK, 7, (short) 4));
+					} else if (lapis <= 500 && lapis >= 436){
+						player.getInventory().addItem (new ItemStack(Material.INK_SACK, 8, (short) 4));
+					}
 				}
 			}
 		} else if (block.getType() == Material.REDSTONE_ORE && player.getGameMode() != GameMode.CREATIVE && player.hasPermission("smelt.redstone") && getConfig().getBoolean("Enabled.Redstone", true)){
@@ -170,10 +200,18 @@ public class TreysAutoSmelt extends JavaPlugin implements Listener{
 				e.setCancelled(true);
 				block.setType(Material.AIR);
 				player.giveExp((int) (getConfig().getInt("XP.Redstone")));
-				if (redstone <= 110){
-					block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.REDSTONE, 4));
-				} else if (redstone <= 200 && redstone >= 111){
-					block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.REDSTONE, 5));
+				if (getConfig().getBoolean("DroppedItems")){
+					if (redstone <= 110){
+						block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.REDSTONE, 4));
+					} else if (redstone <= 200 && redstone >= 111){
+						block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.REDSTONE, 5));
+					}
+				} else {
+					if (redstone <= 110){
+						player.getInventory().addItem(new ItemStack(Material.REDSTONE, 4));
+					} else if (redstone <= 200 && redstone >= 111){
+						player.getInventory().addItem(new ItemStack(Material.REDSTONE, 5));
+					}
 				}
 			}
 		} else if (block.getType() == Material.GLOWING_REDSTONE_ORE && player.getGameMode() != GameMode.CREATIVE && player.hasPermission("smelt.redstone") && getConfig().getBoolean("Enabled.Redstone", true)){
@@ -181,10 +219,18 @@ public class TreysAutoSmelt extends JavaPlugin implements Listener{
 				e.setCancelled(true);
 				block.setType(Material.AIR);
 				player.giveExp((int) (getConfig().getInt("XP.Redstone")));
-				if (redstone <= 110){
-					block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.REDSTONE, 4));
-				} else if (redstone <= 200 && redstone >= 111){
-					block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.REDSTONE, 5));
+				if (getConfig().getBoolean("DroppedItems")){
+					if (redstone <= 110){
+						block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.REDSTONE, 4));
+					} else if (redstone <= 200 && redstone >= 111){
+						block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.REDSTONE, 5));
+					}
+				} else {
+					if (redstone <= 110){
+						player.getInventory().addItem(new ItemStack(Material.REDSTONE, 4));
+					} else if (redstone <= 200 && redstone >= 111){
+						player.getInventory().addItem(new ItemStack(Material.REDSTONE, 5));
+					}
 				}
 			}
 		} else if (block.getType() == Material.DIAMOND_ORE && player.getGameMode() != GameMode.CREATIVE && player.hasPermission("smelt.diamond") && getConfig().getBoolean("Enabled.Diamond", true)){
@@ -192,17 +238,26 @@ public class TreysAutoSmelt extends JavaPlugin implements Listener{
 				e.setCancelled(true);
 				block.setType(Material.AIR);
 				player.giveExp((int) (getConfig().getInt("XP.Diamond")));
-				block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.DIAMOND));
+				if (getConfig().getBoolean("DroppedItems")){
+					block.getWorld().dropItem(player.getLocation(), new ItemStack (Material.DIAMOND));
+				} else {
+					player.getInventory().addItem(new ItemStack (Material.DIAMOND));
+				}
 			}
 		} else if (block.getType() == Material.EMERALD_ORE && player.getGameMode() != GameMode.CREATIVE && player.hasPermission("smelt.emerald") && getConfig().getBoolean("Enabled.Emerald", true)){
 			if (player.getItemInHand().getType().equals(Material.IRON_PICKAXE) || player.getItemInHand().getType().equals(Material.DIAMOND_PICKAXE)){
 				e.setCancelled(true);
 				block.setType(Material.AIR);
 				player.giveExp((int) (getConfig().getInt("XP.Emerald")));
-				block.getWorld().dropItem(player.getLocation(), new ItemStack(Material.EMERALD));
+				if (getConfig().getBoolean("DroppedItems")){
+					block.getWorld().dropItem(player.getLocation(), new ItemStack (Material.EMERALD));
+				} else {
+					player.getInventory().addItem(new ItemStack (Material.EMERALD));
+				}
 			}
 		}
 	}
+
 		
 	@EventHandler
 	public void EntityDeathEvent(EntityDeathEvent e){
@@ -215,12 +270,23 @@ public class TreysAutoSmelt extends JavaPlugin implements Listener{
 			e.setDroppedExp(0);
 			player.giveExp((int) (getConfig().getInt("XP.Pork")));
 			int pork = rand.nextInt(300);
-			if (pork <= 85){
-				entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.GRILLED_PORK));
-			} else if (pork >= 86 && pork <= 240){
-				entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.GRILLED_PORK, 2));
-			} else if (pork >= 241 && pork <= 300){
-				entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.GRILLED_PORK, 3));
+			
+			if (getConfig().getBoolean("DroppedItems")){
+				if (pork <= 85){
+					entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.GRILLED_PORK));
+				} else if (pork >= 86 && pork <= 240){
+					entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.GRILLED_PORK, 2));
+				} else if (pork >= 241 && pork <= 300){
+					entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.GRILLED_PORK, 3));
+				}
+			}else{
+				if (pork <= 85){
+					player.getInventory().addItem(new ItemStack(Material.GRILLED_PORK));
+				} else if (pork >= 86 && pork <= 240){
+					player.getInventory().addItem(new ItemStack(Material.GRILLED_PORK, 2));
+				} else if (pork >= 241 && pork <= 300){
+					player.getInventory().addItem(new ItemStack(Material.GRILLED_PORK, 3));
+				}
 			}
 		} else if ((entity instanceof Cow) && player.hasPermission("smelt.beef") && getConfig().getBoolean("Enabled.Beef", true)){
 			e.getDrops().clear();
@@ -228,41 +294,85 @@ public class TreysAutoSmelt extends JavaPlugin implements Listener{
 			player.giveExp((int) (getConfig().getInt("XP.Beef")));
 			int beef = rand.nextInt(300);
 			int leather = rand.nextInt(300);
-			if (beef <= 87){
-				entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.COOKED_BEEF));				
-			} else if (beef >= 88 && beef <= 245){
-				entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.COOKED_BEEF, 2));
-			} else if (beef >= 246 && beef <= 300){
-				entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.COOKED_BEEF, 3));
+			if (getConfig().getBoolean("DroppedItems")){
+				if (beef <= 87){
+					entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.COOKED_BEEF));				
+				} else if (beef >= 88 && beef <= 245){
+					entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.COOKED_BEEF, 2));
+				} else if (beef >= 246 && beef <= 300){
+					entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.COOKED_BEEF, 3));
+				}
+			} else {
+				if (beef <= 87){
+					player.getInventory().addItem(new ItemStack(Material.COOKED_BEEF));				
+				} else if (beef >= 88 && beef <= 245){
+					player.getInventory().addItem(new ItemStack(Material.COOKED_BEEF, 2));
+				} else if (beef >= 246 && beef <= 300){
+					player.getInventory().addItem(new ItemStack(Material.COOKED_BEEF, 3));
+				}
 			}
-			if (leather <= 130){
-			} else if (leather >= 131 && leather <= 240){
-				entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.LEATHER));
-			} else if (leather >= 241 && leather <= 300){
-				entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.LEATHER, 2));
+			if (getConfig().getBoolean("DroppedItems")){
+				if (leather <= 130){
+				} else if (leather >= 131 && leather <= 240){
+					entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.LEATHER));
+				} else if (leather >= 241 && leather <= 300){
+					entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.LEATHER, 2));
+				}
+			} else {
+				if (leather <= 130){
+				} else if (leather >= 131 && leather <= 240){
+					player.getInventory().addItem(new ItemStack(Material.LEATHER));
+				} else if (leather >= 241 && leather <= 300){
+					player.getInventory().addItem(new ItemStack(Material.LEATHER, 2));
+				}
 			}
 		} else if ((entity instanceof Chicken) && player.hasPermission("smelt.chicken") && getConfig().getBoolean("Enabled.Chicken", true)){
 			e.getDrops().clear();
 			e.setDroppedExp(0);
 			player.giveExp((int) (getConfig().getInt("XP.Chicken")));
-			entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.COOKED_CHICKEN));
+			if (getConfig().getBoolean("DroppedItems")){
+				entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.COOKED_CHICKEN));
+			} else {
+				player.getInventory().addItem(new ItemStack(Material.COOKED_CHICKEN));
+			}
 			int feather = rand.nextInt(200);
-			if (feather <= 80){
-			} else if (feather >=81 && feather <= 140){
-				entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.FEATHER));
-			} else if (feather >= 141 && feather <= 200){
-				entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.FEATHER, 2));
+			if (getConfig().getBoolean("DroppedItems")){
+				if (feather <= 80){
+				} else if (feather >=81 && feather <= 140){
+					entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.FEATHER));
+				} else if (feather >= 141 && feather <= 200){
+					entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.FEATHER, 2));
+				}
+			} else {
+				if (feather <= 80){
+				} else if (feather >=81 && feather <= 140){
+					player.getInventory().addItem(new ItemStack(Material.FEATHER));
+				} else if (feather >= 141 && feather <= 200){
+					player.getInventory().addItem(new ItemStack(Material.FEATHER, 2));
+				}
 			}
 		} else if ((entity instanceof Sheep) && player.hasPermission("smelt.mutton") && getConfig().getBoolean("Enabled.Mutton", true)){
 			e.getDrops().clear();
 			e.setDroppedExp(0);
-			entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.WOOL));
+			if (getConfig().getBoolean("DroppedItems")){
+				entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.WOOL));
+			} else {
+				player.getInventory().addItem(new ItemStack(Material.WOOL));
+			}
 			player.giveExp((int) (getConfig().getInt("XP.Mutton")));
 			int mutton = rand.nextInt(200);
-			if (mutton <= 110){
-				entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.COOKED_MUTTON));
-			} else if (mutton >= 111 && mutton <= 200){
-				entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.COOKED_MUTTON, 2));
+			if (getConfig().getBoolean("DroppedItems")){
+				if (mutton <= 110){
+					entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.COOKED_MUTTON));
+				} else if (mutton >= 111 && mutton <= 200){
+					entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.COOKED_MUTTON, 2));
+				}
+			} else {
+				if (mutton <= 110){
+					player.getInventory().addItem(new ItemStack(Material.COOKED_MUTTON));
+				} else if (mutton >= 111 && mutton <= 200){
+					player.getInventory().addItem(new ItemStack(Material.COOKED_MUTTON, 2));
+				}
 			}
 		} else if ((entity instanceof Rabbit) && player.hasPermission("smelt.rabbit") && getConfig().getBoolean("Enabled.Rabbit", true)){
 			e.getDrops().clear();
@@ -271,17 +381,38 @@ public class TreysAutoSmelt extends JavaPlugin implements Listener{
 			int rabbit = rand.nextInt(200);
 			int hide = rand.nextInt(200);
 			int foot = rand.nextInt(200);
-			if (rabbit <= 105){
-			} else if (rabbit >= 106 && rabbit <= 200){
-				entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.COOKED_RABBIT));
+			if (getConfig().getBoolean("DroppedItems")){
+				if (rabbit <= 105){
+				} else if (rabbit >= 106 && rabbit <= 200){
+					entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.COOKED_RABBIT));
+				}
+			} else {
+				if (rabbit <= 105){
+				} else if (rabbit >= 106 && rabbit <= 200){
+					player.getInventory().addItem(new ItemStack(Material.COOKED_RABBIT));
+				}
 			}
-			if (hide <= 123){
-			} else if (hide >= 124 && hide <= 200){
-				entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.RABBIT_HIDE));
+			if (getConfig().getBoolean("DroppedItems")){	
+				if (hide <= 123){
+				} else if (hide >= 124 && hide <= 200){
+					entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.RABBIT_HIDE));
+					}
+			} else {
+				if (hide <= 123){
+				} else if (hide >= 124 && hide <= 200){
+					player.getInventory().addItem(new ItemStack(Material.RABBIT_HIDE));
+					}
 			}
+		if (getConfig().getBoolean("DroppedItems")){
 			if (foot <= 187){
 			} else if (foot >= 188 && foot <= 200){
 				entity.getWorld().dropItem(player.getLocation(), new ItemStack(Material.RABBIT_FOOT));
+			}
+		} else {
+			if (foot <= 187){
+			} else if (foot >= 188 && foot <= 200){
+				player.getInventory().addItem(new ItemStack(Material.RABBIT_FOOT));
+			}
 			}
 		}
 	}

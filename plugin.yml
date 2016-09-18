@@ -3,7 +3,7 @@ version: 1.0
 name: TreysAutoSmelt
 author: TreyRuffy
 description: Allows you to auto smelt items!
-website: http://dev.bukkit.org/bukkit-plugins/treys-auto-smelt/
+website: https://github.com/TreyRuffy/Treys-Auto-Smelt/wiki
 prefix: Trey's Auto Smelt
 commands:
   treysautosmelt:
