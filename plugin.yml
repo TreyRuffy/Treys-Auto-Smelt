@@ -1,0 +1,71 @@
+main: me.treyruffy.treysautosmelt.TreysAutoSmelt
+version: 1.0
+name: TreysAutoSmelt
+author: TreyRuffy
+description: Allows you to auto smelt items!
+website: http://dev.bukkit.org/bukkit-plugins/treys-auto-smelt/
+prefix: Trey's Auto Smelt
+commands:
+  treysautosmelt:
+    description: Allows you to see all of the Trey's Auto Smelt commands.
+permissions:
+  smelt.*:
+    default: op
+    description: Allows you to automatically smelt all ores after mining them.
+    children:
+      smelt.iron: true
+      smelt.diamond: true
+      smelt.emerald: true
+      smelt.gold: true
+      smelt.lapis: true
+      smelt.quartz: true
+      smelt.coal: true
+      smelt.redstone: true
+      smelt.beef: true
+      smelt.pork: true
+      smelt.chicken: true
+      smelt.rabbit: true
+      smelt.mutton: true
+      smelt.reload: true
+  smelt.iron:
+    default: true
+    description: Allows you to automatically smelt iron.
+  smelt.diamond:
+    default: true
+    description: Allows you to automatically smelt diamond.
+  smelt.emerald:
+    default: true
+    description: Allows you to automatically smelt emerald.
+  smelt.gold:
+    default: true
+    description: Allows you to automatically smelt gold.
+  smelt.lapis:
+    default: true
+    description: Allows you to automatically smelt lapis.
+  smelt.quartz:
+    default: true
+    description: Allows you to automatically smelt quartz.
+  smelt.coal:
+    default: true
+    description: Allows you to automatically smelt coal.
+  smelt.redstone:
+    default: true
+    description: Allows you to automatically smelt redstone.
+  smelt.pork:
+    default: true
+    description: Allows you to automatically get cooked pork from pigs.
+  smelt.chicken:
+    default: true
+    description: Allows you to automatically get cooked chicken from chickens.
+  smelt.beef:
+    default: true
+    description: Allows you to automatically get steak from cows.
+  smelt.rabbit:
+    default: true
+    description: Allows you to automatically get cooked rabbit from rabbits.
+  smelt.mutton:
+    default: true
+    description: Allows you to automatically get cooked mutton from sheep.
+  smelt.reload:
+    default: op
+    description: Allows you to reload Trey's Auto Smelt.

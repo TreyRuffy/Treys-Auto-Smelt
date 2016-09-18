@@ -1,0 +1,99 @@
+# ----------------------------------- #
+# +---------------------------------+
+# |        Trey's Auto Smelt        |
+# | Allows you to auto smelt items! |
+# |       (c) 2016: TreyRuffy       |
+# +---------------------------------+
+# ----------------------------------- #
+
+# -------------------------------------------------------------------------------------- #
+# +------------------------------------------------------------------------------------+
+# |Permissions: These are all of the permissions.                                      |
+# |             smelt.*        - Allows you to get all smelt permissions.              |
+# |             smelt.coal     - Allows you to have coal come to your feet.            |
+# |             smelt.iron     - Allows you to have iron ingots come to your feet.     |
+# |             smelt.lapis    - Allows you to have lapis come to your feet.           |
+# |             smelt.gold     - Allows you to have gold ingots come to your feet.     |
+# |             smelt.redstone - Allows you to have redstone come to your feet.        |
+# |             smelt.emerald  - Allows you to have emerald come to your feet.         |
+# |             smelt.quartz   - Allows you to have quartz come to your feet.          |
+# |             smelt.diamond  - Allows you to have diamond come to your feet.         |
+# |             smelt.pork     - Allows you to have cooked pork come to your feet.     |
+# |             smelt.beef     - Allows you to have steak come to your feet.           |
+# |             smelt.chicken  - Allows you to have cooked chicken come to your feet.  |
+# |             smelt.rabbit   - Allows you to have cooked rabbit come to your feet.   |
+# |             smelt.mutton   - Allows you to have cooked mutton come to your feet.   |
+# |             smelt.reload   - Allows you to reload the plugin.                      |
+# +------------------------------------------------------------------------------------+
+# -------------------------------------------------------------------------------------- #
+
+# ------------------------------------------------------------------------------- #
+# +-----------------------------------------------------------------------------+
+# | Commands: These are all of the commands.                                    |
+# |             /treysautosmelt [help/?] [?] - Allows you to see the help menu. |
+# |             /treysautosmelt reload [?] - Allows you to reload the plugin.   |
+# +-----------------------------------------------------------------------------+
+# ------------------------------------------------------------------------------- #
+
+# -------------------------------------------------------------------------------------- #
+# +------------------------------------------------------------------------------------+
+# |Enabled: #Lets you toggle on or off certain items.                                  |
+# |  Coal: true                                                                        |
+# |  Iron: true                                                                        |
+# |  Lapis: true                                                                       |
+# |  Gold: true                                                                        |
+# |  Redstone: true                                                                    |
+# |  Emerald: true                                                                     |
+# |  Quartz: true                                                                      |
+# |  Diamond: true                                                                     |
+# |  Pork: true                                                                        |
+# |  Beef: true                                                                        |
+# |  Chicken: true                                                                     |
+# |  Rabbit: true                                                                      |
+# |  Mutton: true                                                                      |
+# |XP: #Lets you change the amount of XP a player gets when they mine a block.         |
+# |    #Note: Has to be a whole number.                                                |
+# |  Coal: 1                                                                           |
+# |  Iron: 1                                                                           |
+# |  Lapis: 4                                                                          |
+# |  Gold: 1                                                                           |
+# |  Redstone: 3                                                                       |
+# |  Emerald: 5                                                                        |
+# |  Quartz: 5                                                                         |
+# |  Diamond: 6                                                                        |
+# |  Pork: 2                                                                           |
+# |  Beef: 2                                                                           |
+# |  Chicken: 2                                                                        |
+# |  Rabbit: 2                                                                         |
+# |  Mutton: 2                                                                         |
+# +------------------------------------------------------------------------------------+
+# -------------------------------------------------------------------------------------- #
+
+Enabled:
+    Coal: true
+    Iron: true
+    Lapis: true
+    Gold: true
+    Redstone: true
+    Emerald: true
+    Quartz: true
+    Diamond: true
+    Pork: true
+    Beef: true
+    Chicken: true
+    Rabbit: true
+    Mutton: true
+XP:
+    Coal: 1
+    Iron: 1
+    Lapis: 4
+    Gold: 1
+    Redstone: 3
+    Emerald: 5
+    Quartz: 5
+    Diamond: 6
+    Pork: 2
+    Beef: 2
+    Chicken: 2
+    Rabbit: 2
+    Mutton: 2
