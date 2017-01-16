@@ -30,10 +30,12 @@ public class TreysAutoSmelt extends JavaPlugin implements Listener{
 		getServer().getPluginManager().registerEvents(this, this);
 	    getConfig().options().copyDefaults(true);
 	    saveConfig();
-	    try {
-	        Metrics metrics = new Metrics(this);
-	        metrics.start();
-	    } catch (IOException e){}
+	    if (getConfig().getBoolean("UseMetrics")){
+	    	try {
+	    		Metrics metrics = new Metrics(this);
+	    		metrics.start();
+	    	} catch (IOException e){}
+	    }
 	}
 
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {

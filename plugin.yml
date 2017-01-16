@@ -1,9 +1,9 @@
 main: me.treyruffy.treysautosmelt.TreysAutoSmelt
-version: 1.0
+version: 1.0.1
 name: TreysAutoSmelt
 author: TreyRuffy
 description: Allows you to auto smelt items!
-website: https://github.com/TreyRuffy/Treys-Auto-Smelt/wiki
+website: https://www.spigotmc.org/resources/treys-auto-smelt.29491/
 prefix: Trey's Auto Smelt
 commands:
   treysautosmelt:
