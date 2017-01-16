@@ -114,6 +114,7 @@ public class TreysAutoSmelt extends JavaPlugin implements Listener{
 		return false;
 	}
 	
+	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onBlockBreak(BlockBreakEvent e){
 		Player player = (Player) e.getPlayer();
